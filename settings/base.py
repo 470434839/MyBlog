@@ -6,7 +6,7 @@ from collections import OrderedDict
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAGE_SIZE = 2 
 SECRET_KEY = 'asdfasdfasd'
-DEBUG = True
+DEBUG = False
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'collectstatic')
@@ -28,10 +28,13 @@ TEMPLATES = [
     },
 ]
 
-ALLOWED_HOSTS = ["vatualvenue.xyz",
-                 "vatualvenue.xyz.",
-                 "vatualvenue.xin",
-                 "vatualvenue.xin",]
+ALLOWED_HOSTS = ['vatualvenue.xyz',
+                 'vatualvenue.xyz.',
+                 'vatualvenue.xin',
+                 'vatualvenue.online',
+		 '127.0.0.1',
+		 '*',
+                 'vatualvenue.xin.',]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
