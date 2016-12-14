@@ -2,7 +2,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.views.generic import TemplateView
-
+from django.conf import settings
 from apps.blog.views import AboutView
 from apps.blog.views import ArchiveView
 from apps.blog.views import BlogsWithCategoryView
@@ -12,7 +12,7 @@ from apps.blog.views import TagsView
 from apps.blog.views import CategoriesView
 from apps.blog.views import BlogsWithTagView
 from django_blog.sitemaps import BlogSitemap, IndexSitemap
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 sitemaps = {
@@ -40,3 +40,6 @@ urlpatterns = [
     url(r'^rss/', LatestPosts(), name='feeds'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
+urlpatterns += staticfiles_urlpatterns()
+from django.conf.urls.static import static
+urlpatterns += static("settings.base.STATIC_URL", document_root=settings.STATIC_ROOT)

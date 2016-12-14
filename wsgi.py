@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 WSGI config for django_blog project.
 
@@ -8,7 +9,7 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 """
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_blog.settings.prod")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.base")
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

@@ -4,8 +4,8 @@ import os
 from collections import OrderedDict
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-SECRET_KEY = ''
+PAGE_SIZE = 2 
+SECRET_KEY = 'asdfasdfasd'
 DEBUG = True
 
 STATIC_URL = '/static/'
@@ -28,7 +28,10 @@ TEMPLATES = [
     },
 ]
 
-ALLOWED_HOSTS = ["foofish.net"]
+ALLOWED_HOSTS = ["vatualvenue.xyz",
+                 "vatualvenue.xyz.",
+                 "vatualvenue.xin",
+                 "vatualvenue.xin",]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -71,8 +74,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Myblog',
-        'USER': 'blog',
-        'PASSWORD': 'vatualvenue',
+        'USER': 'root',
+        'PASSWORD': 'root',
         'HOST':'localhost',
         'PORT':'3306',
     }
