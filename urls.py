@@ -40,6 +40,4 @@ urlpatterns = [
     url(r'^rss/', LatestPosts(), name='feeds'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
-urlpatterns += staticfiles_urlpatterns()
-from django.conf.urls.static import static
-urlpatterns += static("settings.base.STATIC_URL", document_root=settings.STATIC_ROOT)
+
